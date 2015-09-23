@@ -1,0 +1,5 @@
+<h2><%= @entry.title %></h2>
+  <p><%= @entry.date %></p>
+  <p><%= @entry.contents %></p>
+<br>
+<p><%= link_to("Back", entries_path) %></p>
