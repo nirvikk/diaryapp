@@ -22,5 +22,10 @@ entry_params = params["entry"].permit("title", "contents")
   entry.update(entry_params)
   redirect_to(entry_path(entry))
 end
-
+  def destroy
+    @entry = Entry.find(params[:id])
+    @entry.destroy
+ 
+    redirect_to entries_path
+  end
 end
